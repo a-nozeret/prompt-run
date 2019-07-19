@@ -1,0 +1,34 @@
+{
+  "name": "prompt-run",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "author": "Antoine Nozeret <antoine.nozeret@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "example": "prompt-run -p example",
+    "example:script": "node examples/dependency-info",
+    "example:cli": "prompt-run -c examples/example-cli yarn lint",
+    "lint": "eslint .eslintrc.json lib test",
+    "test": "jest --watchAll"
+  },
+  "bin": {
+    "prompt-run": "./lib/cli/index.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "cross-spawn": "^6.0.5",
+    "has-yarn": "^2.1.0",
+    "inquirer": "^6.5.0",
+    "meow": "^5.0.0",
+    "which-pm-runs": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.11.1",
+    "eslint-plugin-jsdoc": "^15.5.3",
+    "jest": "^24.8.0"
+  }
+}
