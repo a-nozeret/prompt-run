@@ -22,10 +22,8 @@ promptRun({
       },
     ],
   },
+}).then((childProcess) => {
+  childProcess.on('close', () => {
+    console.log('\nFinished with the child process!')
+  })
 })
-
-// promptRun({
-//   options: {
-//     prefix: 'example',
-//   },
-// })

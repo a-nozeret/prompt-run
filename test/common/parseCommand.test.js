@@ -1,7 +1,5 @@
 const parseCommand = require('../../lib/common/parseCommand')
 
-jest.mock('which-pm-runs', () => () => ({ name: 'yarn' }))
-
 describe('common/parseCommand', () => {
   beforeEach(() => {
     jest.clearAllMocks()

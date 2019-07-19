@@ -39,7 +39,7 @@ describe('common/getQuestions', () => {
           'start:dev',
           'start:prod',
         ],
-        message: 'Select a script among prefixed `start:`',
+        message: 'Select a script to run',
         name: 'prefixedScripts',
         type: 'list',
       }],

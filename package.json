@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "lib/index.js",
   "author": "Antoine Nozeret <antoine.nozeret@gmail.com>",
+  "repository": "a-nozeret/prompt-run",
+  "description": "Run commands based on user input, dynamically generating environment variables, arguments, flags",
   "license": "MIT",
   "scripts": {
     "example": "prompt-run -p example",
@@ -17,10 +19,8 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "cross-spawn": "^6.0.5",
-    "has-yarn": "^2.1.0",
     "inquirer": "^6.5.0",
-    "meow": "^5.0.0",
-    "which-pm-runs": "^1.0.0"
+    "meow": "^5.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
