@@ -9,7 +9,7 @@
     "example:script": "node examples/dependency-info",
     "example:cli": "prompt-run -c examples/example-cli yarn lint",
     "lint": "eslint .eslintrc.json lib test",
-    "test": "jest --watchAll"
+    "test": "jest"
   },
   "bin": {
     "prompt-run": "./lib/cli/index.js"
