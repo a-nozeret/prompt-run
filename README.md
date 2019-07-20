@@ -71,7 +71,7 @@ The config is divided into:
 Check the [**Inquirer** documentation](https://github.com/SBoudrias/Inquirer.js#objects) for full details on how to create question objects.
 
 ## Examples
-### 1. CLI
+#### 1. CLI
 With a defined config of questions
 
 *questions.js*
@@ -98,7 +98,7 @@ prompt-run -c questions.js yarn start
 $ NODE_ENV=development SECRET_KEY=1234 yarn start
 ```
 
-### 2. Scripts
+#### 2. Scripts
 As a node module in scripts
 
 *dependency-info.js*
@@ -138,7 +138,7 @@ promptRun({
 node dependency-info.js
 ```
 
-### 3. Prefix shortcut
+#### 3. Prefix shortcut
 Prompt existing scripts starting with a given prefix
 
 *package.json*

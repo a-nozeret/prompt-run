@@ -2,10 +2,6 @@
   "name": "prompt-run",
   "version": "1.0.0",
   "main": "lib/index.js",
-  "author": "Antoine Nozeret <antoine.nozeret@gmail.com>",
-  "repository": "a-nozeret/prompt-run",
-  "description": "Run commands based on user input, dynamically generating environment variables, arguments, flags",
-  "license": "MIT",
   "scripts": {
     "example": "prompt-run -p example",
     "example:script": "node examples/dependency-info",
@@ -30,5 +26,21 @@
     "eslint-plugin-jest": "^22.11.1",
     "eslint-plugin-jsdoc": "^15.5.3",
     "jest": "^24.8.0"
-  }
+  },
+  "author": "Antoine Nozeret <antoine.nozeret@gmail.com>",
+  "repository": "a-nozeret/prompt-run",
+  "description": "Run commands based on user input, dynamically generating environment variables, arguments, flags",
+  "license": "MIT",
+  "keywords": [
+    "cli",
+    "prompt",
+    "env",
+    "flags",
+    "environment",
+    "variables",
+    "command",
+    "yarn",
+    "npm",
+    "run"
+  ]
 }
