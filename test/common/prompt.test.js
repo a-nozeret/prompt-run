@@ -16,7 +16,7 @@ describe('common/prompt', () => {
   it('returns the correct values given empty arguments', async () => {
     const result = await prompt([], {})
 
-    expect(inquirer.prompt).toHaveBeenCalledTimes(2)
+    expect(inquirer.prompt).toHaveBeenCalledTimes(0)
 
     expect(result).toEqual({
       args: [],
@@ -44,6 +44,8 @@ describe('common/prompt', () => {
         },
       ],
     })
+
+    expect(inquirer.prompt).toHaveBeenCalledTimes(2)
 
     expect(result).toEqual({
       command: 'yarn',

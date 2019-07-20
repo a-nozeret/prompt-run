@@ -165,7 +165,7 @@ yarn lint
 ```
 ### Todo list
 + Bugs:
-  + When no questions or question without a name
+  + Inquirer errors do not appear directly in CLI mode
 + Add visual examples
 + Cleanup package on publish
 + Features:
