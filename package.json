@@ -7,7 +7,9 @@
     "example:script": "node examples/dependency-info",
     "example:cli": "prompt-run -c examples/example-cli yarn lint",
     "lint": "eslint .eslintrc.json lib test",
-    "test": "jest"
+    "test": "jest",
+    "commit": "git-cz",
+    "release": "standard-version"
   },
   "bin": {
     "prompt-run": "./lib/cli/index.js"
@@ -20,12 +22,20 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "2",
     "eslint": "^6.0.1",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jest": "^22.11.1",
     "eslint-plugin-jsdoc": "^15.5.3",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "standard-version": "^6.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "author": "Antoine Nozeret <antoine.nozeret@gmail.com>",
   "repository": "a-nozeret/prompt-run",

@@ -1,14 +1,20 @@
 <h1 align="center">🏃 prompt-run</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.1-blue.svg?cacheSeconds=2592000" />
-</p>
+  
+  [![NPM](https://img.shields.io/npm/v/prompt-run.svg?logo=npm)](https://www.npmjs.com/package/prompt-run)
+  [![Travis Build](https://img.shields.io/travis/a-nozeret/prompt-run/master.svg?logo=travis-ci)](https://travis-ci.org/a-nozeret/prompt-run)
+  [![Codecov Coverage](https://img.shields.io/codecov/c/github/a-nozeret/prompt-run/master.svg?logo=codecov)](https://codecov.io/gh/a-nozeret/prompt-run/)
+  [![JavaScript Style Guide](https://img.shields.io/badge/code_style-airbnb-brightgreen.svg)](https://github.com/airbnb/javascript)
+  [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 > Run commands based on user input, dynamically generating environment variables, arguments, flags
 
-## Install
+## Getting started
 
 ```sh
 yarn add -D prompt-run
+```
+```sh
+prompt-run [options] [command]
 ```
 
 ## API
@@ -178,3 +184,9 @@ yarn lint
 + Cleanup package on publish
 + Features:
   + Map responses for args starting with "-" to "--key value" or "--key" if boolean
+
+## License
+
+Licensed under the MIT License, Copyright © 2019-present Antoine Nozeret.
+
+See [LICENSE](./LICENSE) for more information.
