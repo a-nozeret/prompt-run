@@ -32,14 +32,17 @@ const promptRun = require('prompt-run')
 promptRun({
   command: 'yarn',
   options: {},
-  questions: {},
+  questions: {
+    env: [],
+    args: [],
+  },
 }).then((childProcess) => {})
 ```
 
 #### Command
 The base used to run along the generated command.
 
-*Default*: `yarn` (or `npm run` if your projects doesn't contain a `yarn.lock` file)
+*Default*: `yarn` (or `npm run` if your project doesn't contain a `yarn.lock` file)
 
 It can be anything which is not needed to prompt.
 
@@ -74,6 +77,8 @@ Check the [**Inquirer** documentation](https://github.com/SBoudrias/Inquirer.js#
 #### 1. CLI
 With a defined config of questions
 
+<img src="https://github.com/a-nozeret/prompt-run/raw/master/docs/example-1-cli.gif?raw=true" alt="example-1-cli" width="550"/>
+
 *questions.js*
 ```js
 module.exports = () => ({
@@ -100,6 +105,8 @@ $ NODE_ENV=development SECRET_KEY=1234 yarn start
 
 #### 2. Scripts
 As a node module in scripts
+
+<img src="https://github.com/a-nozeret/prompt-run/raw/master/docs/example-2-script.gif?raw=true" alt="example-2-script" width="550"/>
 
 *dependency-info.js*
 ```js
@@ -141,6 +148,8 @@ node dependency-info.js
 #### 3. Prefix shortcut
 Prompt existing scripts starting with a given prefix
 
+<img src="https://github.com/a-nozeret/prompt-run/raw/master/docs/example-3-prefix.gif?raw=true" alt="example-3-prefix" width="550"/>
+
 *package.json*
 ```json
 {
@@ -166,7 +175,6 @@ yarn lint
 ### Todo list
 + Bugs:
   + Inquirer errors do not appear directly in CLI mode
-+ Add visual examples
 + Cleanup package on publish
 + Features:
   + Map responses for args starting with "-" to "--key value" or "--key" if boolean
