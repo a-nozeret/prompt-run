@@ -15,19 +15,19 @@ describe('common/getQuestions', () => {
     jest.clearAllMocks()
   })
 
-  it('return value given option.config', async () => {
+  it('return value given option.config', () => {
     const result = getQuestions({ options: { config: 'config.mock' } })
 
     expect(result).toEqual(mockConfig)
   })
 
-  it('return value for questions provided', async () => {
+  it('return value for questions provided', () => {
     const result = getQuestions({ questions: mockConfig })
 
     expect(result).toEqual(mockConfig)
   })
 
-  it('return value for option.prefix', async () => {
+  it('return value for option.prefix', () => {
     const result = getQuestions({
       options: { prefix: 'start' },
       pkg: { scripts: { 'start:dev': 'yarn ...', 'start:prod': 'yarn ...' } },
@@ -44,5 +44,18 @@ describe('common/getQuestions', () => {
         type: 'list',
       }],
     })
+  })
+
+  it('option.prefix - exit when no scripts are found', () => {
+    const log = jest.spyOn(console, 'log').mockImplementation(() => {})
+    const mockExit = jest.spyOn(process, 'exit').mockImplementation(() => {})
+
+    getQuestions({
+      options: { prefix: 'start' },
+      pkg: { scripts: {} },
+    })
+
+    expect(mockExit).toHaveBeenCalledWith(1)
+    expect(log).toHaveBeenCalled()
   })
 })
