@@ -1,3 +1,5 @@
 node_modules
-.idea
 coverage
+
+.idea
+.DS_Store

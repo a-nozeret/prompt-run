@@ -1,0 +1,11 @@
+examples
+docs
+test
+coverage
+
+.travis.yml
+.eslintrc*
+.idea
+.editorconfig
+
+.DS_Store
