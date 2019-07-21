@@ -98,6 +98,18 @@ module.exports = () => ({
       name: 'SECRET_KEY',
     },
   ],
+  args: [
+    {
+      type: 'confirm',
+      name: '--watch',
+      default: false,
+    },
+    {
+      name: '--log-level',
+      type: 'list',
+      choices: ['error', 'warning'],
+    },
+  ],
 })
 ```
 *Run*
@@ -106,7 +118,7 @@ prompt-run -c questions.js yarn start
 ```
 *Example output / command executed*
 ```sh
-$ NODE_ENV=development SECRET_KEY=1234 yarn start
+$ NODE_ENV=development SECRET_KEY=1234 yarn start --watch --log-level warning
 ```
 
 #### 2. Scripts
@@ -172,18 +184,19 @@ prompt-run -p start
 ```
 
 ## Development
-### Pre-commit
-
 ```sh
-yarn test
+yarn
+yarn link
+...
+yarn test --coverage
 yarn lint
+yarn commit
+yarn unlink
 ```
 ### Todo list
 + Bugs:
   + Inquirer errors do not appear directly in CLI mode
-+ Cleanup package on publish
-+ Features:
-  + Map responses for args starting with "-" to "--key value" or "--key" if boolean
++ Configs should consist in promptRun Object argument
 
 ## License
 

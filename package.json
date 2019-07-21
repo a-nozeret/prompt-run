@@ -4,6 +4,7 @@
   "main": "lib/index.js",
   "scripts": {
     "example": "prompt-run -p example",
+    "example:getting-started": "prompt-run -c examples/getting-started.js --dry-run prompt-run",
     "example:script": "node examples/dependency-info",
     "example:cli": "prompt-run -c examples/example-cli yarn lint",
     "lint": "eslint .eslintrc lib test",
