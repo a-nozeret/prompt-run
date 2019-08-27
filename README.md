@@ -197,6 +197,7 @@ yarn unlink
 + Bugs:
   + Inquirer errors do not appear directly in CLI mode
 + Configs should consist in promptRun Object argument
++ feature: `$ prompt-run -env NODE_ENV yarn start` shortcut for question
 
 ## License
 
