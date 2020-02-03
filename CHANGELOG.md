@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/a-nozeret/prompt-run/compare/v1.1.0...v1.2.0) (2020-02-03)
+
+
+### Features
+
+* Catch config-file error ([f96fb2e](https://github.com/a-nozeret/prompt-run/commit/f96fb2e))
+
+
+
 ## [1.1.0](https://github.com/a-nozeret/prompt-run/compare/v1.0.3...v1.1.0) (2019-08-06)
 
 
