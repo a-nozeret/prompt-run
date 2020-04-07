@@ -4,8 +4,11 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - master
+    tags:
+      - '*'
 
 jobs:
   build:
@@ -27,7 +30,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: yarn 
+      - run: yarn
       - run: yarn lint
       - run: yarn test
       - run: npm publish
@@ -43,7 +46,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-      - run: yarn 
+      - run: yarn
       - run: yarn lint
       - run: yarn test
       - run: npm publish
