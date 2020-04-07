@@ -198,7 +198,7 @@ yarn unlink
 yarn release
 git push --follow-tags origin master
 ```
-> A [Github Action](https://github.com/a-nozeret/prompt-run/blob/master/.github/workflows/release.yml) will be triggered, publishing the package to NPM
+> A [Github Action](https://github.com/a-nozeret/prompt-run/blob/master/.github/workflows/npmpublish.yml) will be triggered, publishing the package to NPM
 
 
 ### Todo list
