@@ -5,8 +5,6 @@ name: Node.js Package
 
 on:
   push:
-    branches:
-      - master
     tags:
       - '*'
 
@@ -21,16 +19,16 @@ jobs:
       - run: yarn
       - run: yarn lint
       - run: yarn test
-      - run: yarn release
-      - run: git push --follow-tags origin master
 
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Make stable release to npm
-        uses: epeli/npm-release@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
-          type: stable
-          token: ${{ secrets.NPM_TOKEN }}
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
