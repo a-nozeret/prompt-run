@@ -41,7 +41,7 @@
     }
   },
   "author": "Antoine Nozeret <antoine.nozeret@gmail.com>",
-  "repository": "a-nozeret/prompt-run",
+  "repository": "git@github.com:a-nozeret/prompt-run.git",
   "description": "Run commands based on user input, dynamically generating environment variables, arguments, flags",
   "license": "MIT",
   "keywords": [
