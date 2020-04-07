@@ -194,7 +194,12 @@ yarn commit
 yarn unlink
 ```
 ### Publish / release
-[Github Action](https://github.com/a-nozeret/prompt-run/blob/master/.github/workflows/npmpublish.yml) auto-publishing for each commit pushed to master.
+```sh
+yarn release
+git push --follow-tags origin master
+```
+[Github Action](https://github.com/a-nozeret/prompt-run/blob/master/.github/workflows/npmpublish.yml) will be triggered, publishing the package to NPM
+
 
 ### Todo list
 + Bugs:
