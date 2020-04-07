@@ -193,6 +193,14 @@ yarn lint
 yarn commit
 yarn unlink
 ```
+### Publish / release
+```sh
+yarn release
+git push --follow-tags origin master
+```
+> A [Github Action](https://github.com/a-nozeret/prompt-run/blob/master/.github/workflows/release.yml) will be triggered, publishing the package to NPM
+
+
 ### Todo list
 + Bugs:
   + Inquirer errors do not appear directly in CLI mode
