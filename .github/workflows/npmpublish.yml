@@ -21,6 +21,8 @@ jobs:
       - run: yarn
       - run: yarn lint
       - run: yarn test
+      - run: yarn release
+      - run: git push --follow-tags origin master
 
   publish-npm:
     needs: build
